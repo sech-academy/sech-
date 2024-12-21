@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SECH Academy</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Body Background */
+    body {
+      background-color:  rgb(3, 27, 97);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      background-color: royalblue;
+      color: white;
+      font-size: 1.1rem; /* Adjusted for scaling */
+      font-weight: 900;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+    }
+
+    .nav a:hover {
+      background-color: skyblue;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background-image: url("hoody.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      height: 500px;
+      z-index: 1;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 255, 0.3);
+      z-index: 0;
+    }
+
+    .hero h2, .hero button {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 70px;
+      margin-bottom: 20px;
+      color: white;
+      justify-content: center;
+      z-index: 1;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      font-size: 35px;
+      margin-bottom: 20px;
+      color: blue;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: blue;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .hero button:hover {
+      background-color: skyblue;
+    }
+
+    /* Container Styling */
+    .container {
+      background-color: white;
+      color: blue;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .container h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .container p, .container ul {
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: bold;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .container1, .container2, .container3 {
+      background-color: royalblue;
+      color: white;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 1200px;
+      text-align: center;
+    }
+
+    .container1 h3{
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+   
+    .container2 h3 
+    {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+   
+    .container3 h3
+    {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+
+    .container1 p, .container1 ul
+    {
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: bold;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .container2 p, .container2 ul 
+    {
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: bold;
+      text-align: left;
+      padding-left: 20px;
+    }
+   
+    .container3 p, .container3 ul
+    {
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: bold;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .images {
+      display: none;
+      text-align: center;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+
+    .images img {
+      width: 100%;
+      height: auto;
+    }
+
+    .images.active {
+      display: block;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: royalblue;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Responsive Design for Smaller Screens */
+    @media (max-width: 768px) {
+
+      .header {
+        font-size: large;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav a {
+        font-size: 16px;
+        padding: 10px 0;
+      }
+
+      .hero {
+        padding: 50px 20px;
+        height: auto;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+       .images {
+        grid-template-rows: 1fr; /* Stack images in one column on small screens */
+        grid-gap: 15px;
+      }
+
+      .container {
+        max-width: 90%;
+        padding: 15px;
+      }
+
+      .container h3 {
+        font-size: 24px;
+      }
+
+      .container p, .container ul {
+        font-size: 16px;
+      }
+      .container1, .container2, .container3 {
+        max-width: 90%;
+        padding: 15px;
+      }
+
+      .container1 h3, .container2 h3, .container3 h3 {
+        font-size: 24px;
+      }
+
+      .container1 p, .container1 ul,
+      .container2 p, .container2 ul
+      .container3 p, .container3 ul
+      {
+        font-size: 16px;
+      }
+      .footer {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="Vision.html">Vision</a>
+    <a href="Mission.html">Mission</a>
+    <a href="Objectives.html">Objectives</a>
+    <a href="Fee Structure.html">FEE Structure</a>
+    <a href="Why choose us.html">Why Choose Us</a>
+    <a href="curriculum.html">Curriculum</a>
+    <a href="grading-system.html">Grading System</a>
+    <a href="contact.html">Contacts</a>
+    <a href="about.html">About Us</a>
+  </div>
+
+  <div class="hero">
+    <h2>SECH Academy</h2>
+    <p>Bridging the Gap in Education and Sport Development</p>
+    <button onclick="window.location.href=' Why choose us.html'">Learn More</button>
+    <button onclick="window.location.href='Mission.html'">Explore Our Mission</button>
+  </div>
+
+  <div class="slideshow-container">
+    
+    <div id="vision" class="container active">
+      <h3>Vision</h3>
+      <p>Leader in advanced educational methodologies and master in sport development.</p>
+    </div>
+
+    <div id="About us" class="container">
+      <h3>About Us</h3>
+       <p>Sech Academy is a state-of-the-art center framed 
+        to offer ground-breaking teaching and learning in delivering and 
+        supporting both secondary education and sport development.</p> 
+    </div>
+
+    <div id="admissions" class="container">
+      <h3>Admissions</h3>
+      <p>Admissions are open in Grade 8. We believe in setting our own foundation for the holistic development of our learners.</p>
+    </div>
+
+    <div id="Mission" class="container">
+      <h3>Mission</h3>
+      <p>Relegating barriers towards learning and diversifying career paths</p>
+    </div>
+
+    <div id="Fee" class="container">
+      <h3>FEE Structure</h3>
+      <!--<p>Relegating barriers towards learning and diversifying career paths</p>-->
+    </div>
+
+  </div>
+
+  <div class="images active">
+    <img src="why.jpg" alt="Sport Image 2">
+    <img src="sech.jpg" alt="Sport Image 2">
+    <img src="admission.jpg" alt="Sport Image 1">
+    <img src="sech-prosp.jpg" alt="Sport Image 2">
+    <img src="sech-fee.jpg" alt="Sport Image 1">
+  </div>
+
+
+  <div id="why choose us2" class="container2">
+    <h3>Admissions</h3>
+    <p>Admissions are open in Grade 8. We believe in setting our own foundation for the holistic development of our learners.</p>
+    <ul>
+      <li>Applications are Ongoing from November 2024 until March 2025</li>
+      <li>Required documents: Completed application form, transcript of records, personal statement.</li>
+      <li>Online application: Will be available from next academic year, 
+        to apply visit our offices or contact us. CONTACTS are available on the contacts page </li>
+    </ul>
+  </div>
+
+  <div id="why choose us" class="container1">
+    <h3>The SECH Way</h3>
+    <p>We provide Learner-centred lessons and Cognitive series games Interactive and competitive peer tutorials
+      to test speed of thought, critical thinking, ensure reflective learning, and high-achieving learners.</p>
+
+
+      <ul>
+        <li> Situational method in teaching and learning </li>
+        <li>SECH e-tutor: virtual campus for learners to access recorded lessons,
+           summarized notes, questions and answers, etc. </li>
+        <li>Continuous positive reinforcement: Monthly awards for high-achieving learners </li>
+        <li>Parental engagement: working closely with parents in learners development </li>
+      </ul>
+    </div>
+
+   <div id="principal values" class="container3">
+      <h3>Pricipal Values</h3>
+      
+      <ul>
+        <li>Professionalism</li>
+        <li>Integrity</li>
+        <li>Transparency and accountability</li>
+        <li>Inclusion and collaboration</li>
+        <li>Creativity and innovation</li>
+        <li>High work ethic </li>
+      </ul>
+    </div>
+
+  <div class="footer">
+    <p>&copy; 2024 SECH Academy. All rights reserved.</p>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slideshow-container .container');
+    const imageSlides = document.querySelectorAll('.images img');
+
+    function showSlides() {
+      slides.forEach((slide, index) => {
+        slide.style.display = "none";
+        slide.classList.remove('active');
+      });
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].style.display = "block";
+      slides[slideIndex].classList.add('active');
+    }
+
+    setInterval(showSlides, 8000); 
+
+    let imageIndex = 0;
+
+    function showImageSlides() {
+      imageSlides.forEach((image, index) => {
+        image.style.display = "none";
+      });
+      imageIndex = (imageIndex + 1) % imageSlides.length;
+      imageSlides[imageIndex].style.display = "block";
+    }
+
+    setInterval(showImageSlides, 8000);
+  </script>
+
+</body>
+</html>

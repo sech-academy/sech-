@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SECH Way</title>
+  <style>
+    body {
+      background-color: #4169e1;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Separate section for the background image */
+    .background-section {
+      background-image: url("innoviation.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 500px;
+      position: relative;
+    }
+    .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 255, 0.3); /* Dark overlay with 50% opacity */
+            margin-top: 0.2px;
+        }
+
+    /* Container positioned at the bottom of the background image */
+    .container {
+      max-width: 1100px;
+      padding: 15px;
+      background-color: #4169e1;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 0;
+      box-sizing: border-box; /* Ensures padding doesn't affect width */
+      z-index: 1;
+    }
+
+    h2 {
+      color: white;
+      font-size: 2rem; /* Adjusted for better scaling */
+      font-weight: bold;
+      font-style: normal;
+      text-decoration: underline;
+    }
+
+    p {
+      font-size: 1.2rem; /* Adjusted for readability */
+      line-height: 1.6;
+      color: white;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      background-color: royalblue;
+      color: white;
+      font-size: 1.1rem; /* Adjusted for scaling */
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+    }
+
+    .nav a:hover {
+      background-color: skyblue;
+    }
+
+    /* Grid layout for images and text section */
+    .content-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text-content h3 {
+      color: #4169e1;
+      margin-bottom: 5px;
+      text-decoration: underline;
+      font-size: 1.2rem; /* Adjusted for better scaling */
+      line-height: 1.8;
+      text-transform: capitalize;
+    }
+
+    .text-content p {
+      font-size: 1.2rem; /* Adjusted for readability */
+      text-decoration: overline;
+    }
+
+    .text-content ul
+    {
+      font-size: 1.2rem;
+      color: black;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .horizontal-line {
+      height: 4px;
+      background-color: white;
+      width: 85%;
+      margin: 20px auto; /* Centered with space on sides */
+    }
+
+    .footer {
+      font-size: 0.2rem; /* Adjusted for readability */
+      margin-left: 10%; /* Adjusted for mobile scaling */
+      font-style: italic;
+      text-align: center; /* Center aligned for mobile */
+    }
+
+    .horizontal-linee {
+      height: 4px;
+      background-color: white;
+      width: 85%;
+      margin: 20px auto;
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) {
+      .background-section {
+        height: 300px; /* Adjust background image height for smaller screens */
+      }
+
+      .container {
+        padding: 10px;
+        text-align: center; /* Center content for smaller screens */
+      }
+
+      h2 {
+        font-size: 1.5rem; /* Reduce title size */
+      }
+
+      p {
+        font-size: 0.9rem; /* Reduce paragraph size */
+      }
+
+      .nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        font-size: 0.9rem; /* Adjust navigation font size */
+      }
+
+      .content-section {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        padding: 10px;
+      }
+
+      .text-content h3 {
+        font-size: 1rem; /* Reduce section header size */
+      }
+
+      .footer {
+        font-size: 0.7rem; /* Smaller footer text */
+        margin-left: 5%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.2rem; /* Further reduce title size for very small screens */
+      }
+
+      p {
+        font-size: 0.8rem; /* Further reduce paragraph size */
+      }
+
+      .nav {
+        font-size: 0.8rem; /* Adjust navigation font size */
+      }
+
+      .container {
+        padding: 5px;
+      }
+
+      .text-content h3 {
+        font-size: 0.9rem; /* Smaller header size */
+      }
+
+      .footer {
+        font-size: 0.6rem; /* Adjust footer size for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation menu at the top -->
+  <div class="nav">
+ <!---- <a href="application.html" target="_blank" download>Applications</a>-->
+ <a href="index.html">Home</a>
+ <a href="Vision.html">Vision</a>
+ <a href="Mission.html">Mission</a>
+ <a href="Objectives.html">Objectives</a>
+ <a href="The SECH Way.html">The SECH Way</a>
+ <a href="Fee Structure.html">FEE Structure</a>
+ <a href="Why choose us.html">Why Choose Us?</a>
+ <a href="admission.html">Admissions</a>
+ <a href="curriculum.html">Curriculum</a>
+ <a href="grading-system.html">Grading System</a>
+ <a href="contact.html">Contacts</a>
+ <a href="about.html">About Us</a>
+  </div>
+
+  <!-- Background image section -->
+  <div class="background-section">
+    <div class="overlay"></div>
+    <div class="container">
+      <h2>The SECH Way</h2>
+      <p>We provide Learner-centred lessons and Cognitive series games Interactive and competitive peer tutorials
+         to test speed of thought, critical thinking, ensure reflective learning, and high-achieving learners.
+       
+       
+      </p>
+    </div>
+  </div>
+
+  <!-- Additional section with facilities and images below the main content -->
+  <div class="content-section">
+    <div class="text-content">
+      <h3>SECH Way</h3>
+      <ul>
+        <li> Situational method in teaching and learning </li>
+        <li>SECH e-tutor: virtual campus for learners to access recorded lessons,
+           summarized notes, questions and answers, etc. </li>
+        <li>Continuous positive reinforcement: Monthly awards for high-achieving learners </li>
+        <li>Parental engagement: working closely with parents in learners development </li>
+      </ul>
+    </div>
+  <!----  <div class="image-gallery">
+      <img src="learners.png" alt="Image 1">
+      <img src="speedreading.jpg" alt="Image 2">
+      <img src="pupils.jpeg" alt="Image 2">
+    </div>
+  -->
+  </div>
+<!----
+  <div class="horizontal-line"></div>
+
+  <div class="footer">
+    <p>Sech Academy is a registered academy Lesotho &copy; 2024 SECH Academy. All rights reserved.</p>
+  </div>
+  
+  <div class="horizontal-linee"></div>
+-->
+</body>
+</html>
